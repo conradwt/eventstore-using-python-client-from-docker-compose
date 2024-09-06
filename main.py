@@ -1,6 +1,5 @@
 import json
 import os
-from waitress import serve
 from flask import Flask, request
 from dataclasses import dataclass
 from esdbclient import EventStoreDBClient, NewEvent, StreamState
@@ -12,7 +11,7 @@ def get_ca_certificate(certificate_path: str) -> str:
 
   ca_cert_path = os.path.join(current_dir, certificate_path)
 
-  print(ca_cert_path, flush=True)
+  # print(ca_cert_path, flush=True)
 
   with open(ca_cert_path, "rt") as f:
     return f.read()
