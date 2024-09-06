@@ -45,6 +45,7 @@ Note: This tutorial was updated on macOS 14.6.1.
 
    ```text
     NAME               IMAGE                                        COMMAND                  SERVICE            CREATED          STATUS                    PORTS
+    eventstore-using-python-client-from-docker-compose-app-1   esdb-sample-python                           "gunicorn -w 4 -b 0.…"   app                2 minutes ago   Up About a minute        0.0.0.0:8080->8080/tcp
     node1.eventstore   eventstore/eventstore:24.6.0-alpha-arm64v8   "/opt/eventstore/Eve…"   node1.eventstore   11 seconds ago   Up 10 seconds (healthy)   1112-1113/tcp, 0.0.0.0:2111->2113/tcp
     node2.eventstore   eventstore/eventstore:24.6.0-alpha-arm64v8   "/opt/eventstore/Eve…"   node2.eventstore   11 seconds ago   Up 10 seconds (healthy)   1112-1113/tcp, 0.0.0.0:2112->2113/tcp
     node3.eventstore   eventstore/eventstore:24.6.0-alpha-arm64v8   "/opt/eventstore/Eve…"   node3.eventstore   11 seconds ago   Up 10 seconds (healthy)   1112-1113/tcp, 0.0.0.0:2113->2113/tcp

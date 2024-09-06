@@ -98,28 +98,28 @@ services:
       clusternetwork:
         ipv4_address: 172.30.240.13
 
-  # app:
-  #   image: esdb-sample-python
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   env_file:
-  #     - development.env
-  #   ports:
-  #     - '8080:8080'
-  #   depends_on:
-  #     node1.eventstore:
-  #       condition: service_healthy
-  #     node2.eventstore:
-  #       condition: service_healthy
-  #     node3.eventstore:
-  #       condition: service_healthy
-  #   networks:
-  #     clusternetwork:
-  #       ipv4_address: 172.30.240.14
-  #   volumes:
-  #     - .:/app
-  #     - certs:/certs
+  app:
+    image: esdb-sample-python
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - development.env
+    ports:
+      - '8080:8080'
+    depends_on:
+      node1.eventstore:
+        condition: service_healthy
+      node2.eventstore:
+        condition: service_healthy
+      node3.eventstore:
+        condition: service_healthy
+    networks:
+      clusternetwork:
+        ipv4_address: 172.30.240.14
+    volumes:
+      - .:/app
+      - certs:/certs
 
 networks:
   clusternetwork:
