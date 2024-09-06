@@ -1,0 +1,7 @@
+# Exclude VSCode artifacts
+.metals/
+.vscode/
+
+# Exclude Build Artifacts
+certs
+development.env
