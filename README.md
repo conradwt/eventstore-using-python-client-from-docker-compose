@@ -22,7 +22,7 @@ Note: This tutorial was updated on macOS 14.6.1.
 
 ## Running The Sample
 
-1. Clone the repository:
+1. clone the repository:
 
    ```
    git clone https://github.com/conradwt/eventstore-using-python-client-from-docker-compose.git
@@ -35,13 +35,13 @@ Note: This tutorial was updated on macOS 14.6.1.
    cp development.env.example development.env
    ```
 
-3. Run the application and database using Docker Compose:
+3. run the client application and database using Docker Compose
 
    ```
    docker compose up -d
    ```
 
-4. Verify the containers are up and running:
+4. verify the containers are up and running
 
    ```zsh
    docker compose ps
@@ -57,7 +57,7 @@ Note: This tutorial was updated on macOS 14.6.1.
     node3.eventstore   eventstore/eventstore:24.6.0-alpha-arm64v8   "/opt/eventstore/Eve…"   node3.eventstore   11 seconds ago   Up 10 seconds (healthy)   1112-1113/tcp, 0.0.0.0:2113->2113/tcp
    ```
 
-5. Test the application:
+5. test the application:
 
    Say hello as `Ouro`:
 
@@ -83,7 +83,7 @@ Note: This tutorial was updated on macOS 14.6.1.
    2 visitors have been greeted, they are: [Ouro, YourName]
    ```
 
-6. To stop and remove the containers, use:
+6. stop and remove the containers
 
    ```zsh
    docker compose down
